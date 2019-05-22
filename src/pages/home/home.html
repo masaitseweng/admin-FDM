@@ -1,0 +1,149 @@
+<ion-header>
+    <ion-navbar color="FDMcolor">
+
+      <button ion-button menuToggle>
+        <ion-icon  name="menu"></ion-icon>
+      </button>
+
+      <ion-title class="" text-wrap>
+          Flawless digital Marketing
+      </ion-title>
+
+      <ion-buttons end>
+
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+
+      </ion-buttons>
+
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+
+    <ion-card>
+
+        <ion-item>
+          <ion-avatar item-start>
+            <!-- <img src="assets/imgs/avatar.jpeg"> -->
+          </ion-avatar>
+          <h2>Masa</h2>
+          <p>{{myDate | date: H:mm  }}</p>
+
+               
+        </ion-item>
+
+        <!-- <ion-datetime displayFormat="MMM DD, YYYY HH:mm" pickerFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime> -->
+
+
+        <!-- <img src="assets/imgs/home2.jpg"> -->
+      
+        <ion-card-content>
+          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+        </ion-card-content>
+
+        <ion-item >
+            <button color="FDMcolor" ion-button icon-start clear text-uppercase>
+                <ion-icon name="send"></ion-icon>
+                <div>11</div>    
+            </button>                  
+
+            <button color="FDMcolor" ion-button icon-start clear item-end text-uppercase>
+              <ion-icon name="pricetags"></ion-icon>
+              R 100
+            </button>
+
+        </ion-item>
+
+        
+      
+        <!-- <ion-row class="tt" color="FDMcolor">
+
+          <ion-col>
+            <button ion-button icon-start clear small >
+              <ion-icon name="send"></ion-icon>
+              <div>11</div>
+              
+            </button>
+          </ion-col>
+
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="pricetags"></ion-icon>
+              <div>R 100 </div>
+            </button>
+          </ion-col>
+
+          <ion-col center text-center>
+              <ion-note>
+                Active
+              </ion-note>
+            </ion-col>
+
+        </ion-row> -->
+      
+      </ion-card>
+
+      <!-- gg -->
+
+
+      <button color="FDMcolor" ion-button block (click)="ProductPage()">
+        <ion-icon name="paper-plane"> </ion-icon>
+           <div>Quotation</div>
+      </button>
+
+      
+
+  
+
+
+
+</ion-content>
+
+
+
+<!--   
+<ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="img/marty-avatar.png">
+      </ion-avatar>
+      <h2>Marty McFly</h2>
+      <p>November 5, 1955</p>
+    </ion-item>
+  
+    <img src="img/advance-card-bttf.png">
+  
+    <ion-card-content>
+      <p>Flawless digital marketing app to send quotation to clients</p>
+    </ion-card-content>
+  
+    <ion-row>
+
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="person"></ion-icon>
+          <div>Number of Quotes   <ion-note>
+              R 1100111
+              </ion-note></div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>Total Quotes Amount   <ion-note>
+              R 1100111
+              </ion-note></div>   
+        
+        </button>
+      </ion-col>
+       <ion-col center text-center>
+        <ion-note>
+          Total amount R1100111
+        </ion-note>
+      </ion-col> 
+    </ion-row>
+  
+  </ion-card> -->

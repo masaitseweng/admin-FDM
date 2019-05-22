@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="FDMcolor">
+
+    <ion-title class="" text-wrap>
+      Flawless digital Marketing Admin
+    </ion-title>
+
+    <ion-buttons end>
+
+      <button ion-button tappable (click)="presentNotifications($event)">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+
+  <!-- stores slider images -->
+  <ion-card>
+
+<!-- 
+    <ion-slides *ngIf="shops && shops.length" autoplay="3000" class="slideroption" pager="true" loop="true" speed="300">
+      <ion-slide *ngFor="let store of shops">
+        <img [src]="store.img" />
+      </ion-slide>
+    </ion-slides> -->
+
+
+  </ion-card>
+
+  <ion-list text-center style="margin-bottom:0;">
+    <ion-item-divider color="danger">Dashboard</ion-item-divider>
+  </ion-list>
+
+    <ion-list class="user-list">
+      <button ion-item menuClose class="text-1x" *ngFor="let menuItem of appMenuItems" (click)="openPage(menuItem)">
+        <ion-icon item-left [name]="menuItem.icon" color="FDMcolor"></ion-icon>
+        <span ion-text color="FDMcolor">{{menuItem.title}}</span>
+      </button>
+    </ion-list>
+
+
+
+</ion-content>

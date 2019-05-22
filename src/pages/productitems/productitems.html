@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar color="FDMcolor">
+    <ion-title text-wrap></ion-title>
+  </ion-navbar>
+
+  <button class="price" ion-button block  clear>
+     R{{amount}}
+ </button>
+
+</ion-header>
+
+
+<ion-content >
+
+
+    <ion-list>
+
+        <ion-list-header  class="headers-product" text-uppercase text-center>
+          {{viewname}}
+        </ion-list-header>
+
+       
+    
+        <ion-item  block *ngFor="let productitem of productitems;let i = index;" >
+           
+            <ion-label  text-wrap>{{productitem.name}}</ion-label>
+            <ion-label text-right >R {{productitem.amount}}</ion-label>
+            <ion-checkbox   color="danger" checked="false" [(ngModel)]="productitem.checked" (ionChange)="selected(productitem)"></ion-checkbox>        
+          </ion-item>   
+      </ion-list>
+
+      <div class="button-padding" >
+
+      <button ion-button block color="danger" (click)="qty()">
+        Add Qty
+      </button>
+      </div>
+
+
+      <div class="button-padding">
+        <button ion-button block color="danger" (click)="addquote()">
+          add another Quote
+        </button>
+      </div>
+
+</ion-content>

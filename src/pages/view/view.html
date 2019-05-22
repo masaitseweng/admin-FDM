@@ -1,0 +1,300 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>view</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="grid-basic-page" padding>
+
+  <img src="assets/imgs/home2.jpg">
+
+    <div *ngIf="discount">
+    
+      <ion-grid>
+    
+        <ion-row>
+          <ion-col col-6>
+            <strong>Name</strong>
+          </ion-col>
+    
+    
+          <ion-col col-2>
+            <strong>Qty</strong>
+          </ion-col>
+    
+          <ion-col col-4>
+            <strong>Total</strong>
+          </ion-col>
+    
+        </ion-row>
+    
+        <ion-row *ngFor="let item of itemcheck">
+          <ion-col col-6>
+            {{item.name}}
+          </ion-col>
+          <ion-col col-2>
+            {{item.quantity}}
+          </ion-col>
+          <ion-col col-4>
+            R {{item.amount}}
+          </ion-col>
+        </ion-row>
+    
+    
+        <ion-row>
+          <ion-col offset-4>
+            Sub Total
+          </ion-col>
+          <ion-col col-4>
+            R {{subtotal}}
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col offset-4>
+            Discount {{percentage}}% 
+          </ion-col>
+          <ion-col col-4>
+          R {{discountpriceview}}
+          </ion-col>
+        </ion-row>
+    
+        <!-- <ion-row>
+          <ion-col offset-4>
+            15% VAT
+          </ion-col>
+          <ion-col col-4>
+            R {{vat}}
+          </ion-col>
+        </ion-row> -->
+    
+        <ion-row>
+          <ion-col offset-4>
+            Total
+          </ion-col>
+          <ion-col col-4>
+            R {{totalFormated}}
+          </ion-col>
+        </ion-row>
+    
+      </ion-grid>
+    
+    
+    </div>
+
+
+
+
+  <div *ngIf="quote">
+
+  <ion-grid >
+
+    <ion-row>
+      <ion-col col-6>
+        <strong>Name</strong>
+      </ion-col>
+
+
+      <ion-col col-2>
+        <strong>Qty</strong>
+      </ion-col>
+
+      <ion-col col-4>
+        <strong>Total</strong>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row *ngFor="let item of itemcheck">
+      <ion-col col-6>
+        {{item.name}}
+      </ion-col>
+        <ion-col col-2>
+         {{item.quantity}}
+        </ion-col>
+      <ion-col col-4>
+        R {{item.amount}}
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col offset-4>
+        Sub Total
+      </ion-col>
+      <ion-col col-4>
+        R {{subtotal}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset-4>
+        15% VAT
+      </ion-col>
+      <ion-col col-4>
+        R {{vat}}%
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset-4>
+        Total
+      </ion-col>
+      <ion-col col-4>
+        R {{total}}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+  </div>
+
+
+      <div *ngIf="outstanding">
+      
+      
+  <ion-grid >
+
+    <ion-row>
+      <ion-col col-6>
+        <strong>Name</strong>
+      </ion-col>
+
+
+      <ion-col col-2>
+        <strong>Qty</strong>
+      </ion-col>
+
+      <ion-col col-4>
+        <strong>Total</strong>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row *ngFor="let item of itemcheck">
+      <ion-col col-6>
+        {{item.name}}
+      </ion-col>
+        <ion-col col-2>
+         {{item.quantity}}
+        </ion-col>
+      <ion-col col-4>
+        R {{item.amount}}
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col offset-4>
+        Sub Total
+      </ion-col>
+      <ion-col col-4>
+        R {{subtotal}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset-4>
+        Amount Paid
+      </ion-col>
+      <ion-col col-4>
+        R {{paid}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col offset-4>
+        Total
+      </ion-col>
+      <ion-col col-4>
+        R {{total}}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+      
+      </div>
+
+
+
+  <div *ngIf="invoice">
+        
+          <ion-grid>
+        
+            <ion-row>
+              <ion-col col-6>
+                <strong>Name</strong>
+              </ion-col>
+        
+        
+              <ion-col col-2>
+                <strong>Qty</strong>
+              </ion-col>
+        
+              <ion-col col-4>
+                <strong>Total</strong>
+              </ion-col>
+        
+            </ion-row>
+        
+            <ion-row *ngFor="let item of itemcheck">
+              <ion-col col-6>
+                {{item.name}}
+              </ion-col>
+              <ion-col col-2>
+                {{item.quantity}}
+              </ion-col>
+              <ion-col col-4>
+                R {{item.amount}}
+              </ion-col>
+            </ion-row>
+        
+        
+            <ion-row>
+              <ion-col offset-4>
+                Sub Total
+              </ion-col>
+              <ion-col col-4>
+                R {{subtotal}}
+              </ion-col>
+            </ion-row>
+        
+            <ion-row>
+              <ion-col offset-4>
+                15% VAT
+              </ion-col>
+              <ion-col col-4>
+                R {{vat}}%
+              </ion-col>
+            </ion-row>
+        
+            <ion-row>
+              <ion-col offset-4>
+                Total
+              </ion-col>
+              <ion-col col-4>
+                R {{total}}
+              </ion-col>
+            </ion-row>
+        
+          </ion-grid>
+   </div>
+
+
+
+
+
+  <button ion-button block color="danger" (click)="emailQuote()">
+    <!-- <ion-icon name='send'></ion-icon> -->
+    Email Quote
+  </button>
+
+
+
+</ion-content>

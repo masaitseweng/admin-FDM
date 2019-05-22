@@ -1,0 +1,95 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>adddiscount</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+      <ion-list >
+
+        <ion-item-divider text-center color="fourtwentylight">
+         Client discount 
+        </ion-item-divider>
+
+        <ion-card color="danger" >
+          <ion-item color="danger">
+
+            <ion-grid>
+              <ion-row>
+                <ion-col col-12 text-center>
+                  <button detail-none  color="danger" ion-item>
+                    <ion-icon name="ios-trending-up-outline" item-start></ion-icon>
+                    <strong>Subtotal</strong> <span> R{{subformat}} &nbsp;</span>
+                  </button>
+
+
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col col-12>
+                    <button detail-none color="danger" ion-item>
+                      <ion-icon name="cut" item-start></ion-icon>
+                      <strong>Discount</strong> <span> R{{discountformated }} &nbsp;</span>
+                    </button>
+                
+                </ion-col>
+              </ion-row>
+
+
+              <ion-row>
+                <ion-col col-12>
+                <button detail-none color="danger" ion-item>
+                  <ion-icon name="ios-trophy-outline" item-start></ion-icon>
+                  <strong>Total</strong> <span> R{{totalformat}} &nbsp;</span>
+                </button>
+              
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+      
+
+     
+
+         
+
+           
+      
+          </ion-item>
+          <ion-item text-center class="compact">
+            <ion-row no-padding>
+              <ion-col col-12 no-padding>
+                <button small style="width: 55px;" color="danger" ion-button icon-only [disabled]="disabledone" (click)="one(item)">
+                  5%
+                </button>
+                  <button small style="width: 55px;" color="danger" ion-button icon-only [disabled]="disabledtwo" (click)="two(item)">
+                    10%
+                  </button>
+                  <button small style="width: 55px;" color="danger" ion-button icon-only [disabled]="disabledthree" (click)="three(item)">
+                    25%
+                  </button>
+                    <button small style="width: 55px;" color="danger" ion-button icon-only [disabled]="disabledfour" (click)="four(item)">
+                      50%
+                    </button>
+              </ion-col>
+              <ion-col col-4 style="text-align: right;">
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+        </ion-card>
+      </ion-list>
+
+          <button ion-button block color="danger" [disabled]="EnableSend" (click)="send()">
+          
+            Send
+          </button>
+
+</ion-content>

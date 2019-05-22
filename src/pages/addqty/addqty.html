@@ -1,0 +1,68 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>checkout</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="login-content">
+
+
+    <ion-list>
+        <ion-item-divider text-center color="fourtwentylight">
+          Items In My Cart
+        </ion-item-divider>
+        <ion-item-divider color="light" [hidden]="!showEmptyCartMessage">
+          <small>There are no products in your cart.</small>
+        </ion-item-divider>
+    
+        <ion-card color="danger"  *ngFor="let item of productitems; let i = index">
+          <ion-item color="danger"  >
+    
+            <ion-thumbnail item-right>
+              <!-- <img [src]="viewimages" /> -->
+            </ion-thumbnail>
+            
+            <h2 text-center> {{ item.name }}</h2>
+
+
+            <p ><span  > R{{item.amount}}&nbsp;</span></p>
+          </ion-item>
+
+          <ion-item class="compact">
+            <ion-row no-padding>
+              <ion-col col-8 no-padding>
+                <button clear color="danger" ion-button icon-only (click)="changeRemove(item)">
+                  <ion-icon name="remove-circle"></ion-icon>
+                </button>
+                <button ion-button color="dark" clear>{{item.quantity}}</button>
+                <button clear color="danger" ion-button icon-only (click)="changeadd(item)">
+                  <ion-icon name="add-circle"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col col-4 style="text-align: right;">
+                <button ion-button small outline (click)="removeFromCart(item, i)" style="width: 64px;" color="danger">Remove</button>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-card>
+      </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="danger">
+      <ion-row no-padding >
+        <ion-col no-padding>
+          <button ion-button color="light" block outline (click)="ViewOrDiscountQuote()">Quote</button>
+        </ion-col>
+        <ion-col no-padding>
+          <button ion-button color="light"  block clear>TOTAL {{subtotal }}</button>
+        </ion-col>
+        <ion-col no-padding>
+          <button ion-button color="light" block outline  (click)="Invoice()">Invoice</button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-navbar color="FDMcolor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="" text-center>
+      Add Appointment
+    </ion-title>
+
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+        refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
+
+
+  
+  <ion-card *ngFor="let info of getclientinfo">
+  
+    <ion-card-header style="background-color:#ec1d25;" color="light" text-center>
+      <ion-icon name="home"></ion-icon>{{info.CompanyName}}
+    </ion-card-header>
+
+    <ion-item>
+      <ion-label color="FDMcolor" floating> {{info.JobTitlePosition}}</ion-label>
+      <ion-icon color="FDMcolor" name="globe" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="FDMcolor" floating>{{info.PersonsName}}</ion-label>
+      <ion-icon color="FDMcolor" name="pin" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="FDMcolor" floating>{{info.EmailAddress}}</ion-label>
+      <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <!-- Phone Numbers -->
+    <ion-item>
+      <ion-label color="FDMcolor" floating>{{info.ContactNumber}}</ion-label>
+      <ion-icon color="FDMcolor" name="phone-portrait" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <!-- Alternate Numbers -->
+    <ion-item>
+      <ion-label color="FDMcolor" floating>{{info.Streetaddress}}</ion-label>
+      <ion-icon color="FDMcolor" name="call" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <!-- Website -->
+    <ion-item>
+      <ion-label color="FDMcolor" floating>{{info.Suburb}}</ion-label>
+      <ion-icon color="FDMcolor" name="open" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label color="FDMcolor" floating>{{info.CityTown}}</ion-label>
+      <ion-icon color="FDMcolor" name="open" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label color="FDMcolor" floating>{{info.PostalCode}}</ion-label>
+      <ion-icon color="FDMcolor" name="open" item-right></ion-icon>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-item>
+        <ion-textarea color="FDMcolor" placeholder="{{info.others}}"></ion-textarea>
+      </ion-item>
+    </ion-item>
+  
+    <ion-item text-center class="compact">
+      <ion-row no-padding>
+        <ion-col col-12 no-padding>
+  
+          <button clear color="danger" ion-button (click)="editinfo(info)">
+            Edit Info
+          </button>
+  
+          <button clear color="danger" ion-button (click)="addappointment(info)">
+            Add Appointment
+          </button>
+  
+        </ion-col>
+        <ion-col col-4 style="text-align: right;">
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+ 
+
+<!-- </ion-content> -->

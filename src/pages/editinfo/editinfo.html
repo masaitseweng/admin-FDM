@@ -1,0 +1,113 @@
+
+<ion-header>
+
+  <ion-navbar text-center color="FDMcolor">
+    <ion-title>Edit Info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+
+            <ion-card-header style="background-color:#ec1d25;" color="light" text-center>
+              <ion-icon name="create"></ion-icon> Edit Info
+            </ion-card-header>
+        
+      <ion-card-content>
+    
+        <!-- Name of business  -->
+
+      <ion-item text-wrap>
+        <ion-label color="default" >Company Name</ion-label>
+        <ion-icon color="default" name="home" item-right></ion-icon>
+        <ion-input text-wrap color="FDMcolor"  type="text" [(ngModel)]="info.CompanyName"></ion-input>
+      </ion-item>
+
+       <!-- JobTitlePosition -->
+
+        <ion-item text-wrap>
+            <ion-label color="default">Job Title/Position</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input text-wrap color="FDMcolor"  type="text" [(ngModel)]="info.JobTitlePosition"></ion-input>
+        </ion-item>
+
+        <!-- Persons Name -->
+
+        <ion-item text-wrap>
+            <ion-label color="default">Persons Name</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input  color="FDMcolor"  type="text" [(ngModel)]="info.PersonsName"></ion-input>
+        </ion-item>
+
+
+        <!-- Contact -->
+    
+        <ion-item>
+          <ion-label color="default">Email Address</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input color="FDMcolor"  type="text" [(ngModel)]="info.EmailAddress"></ion-input>
+        </ion-item>
+
+    
+        <!-- Phone Numbers -->
+
+        <ion-item>
+          <ion-label color="default">Contact Number</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input color="FDMcolor"  type="text" [(ngModel)]="info.ContactNumber"></ion-input>
+        </ion-item>
+    
+        <!-- Street address -->
+
+        <ion-item>
+          <ion-label color="default">Street address</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input color="FDMcolor"  type="text" [(ngModel)]="info.Streetaddress"></ion-input>
+        </ion-item>
+
+    
+        <!-- Suburb -->
+
+        <ion-item>
+          <ion-label color="default">Suburb</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input color="FDMcolor"  type="text" [(ngModel)]="info.Suburb"></ion-input>
+        </ion-item>
+
+
+    <!-- City Twon -->
+
+        <ion-item>
+          <ion-label color="default">City/Twon</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input color="FDMcolor" text-wrap type="text" [(ngModel)]="info.CityTown"></ion-input>
+        </ion-item>
+
+
+    <!-- Postal Code-->
+
+        <ion-item>
+          <ion-label color="default">Postal Code</ion-label>
+          <ion-icon color="FDMcolor" name="person" item-right></ion-icon>
+          <ion-input color="FDMcolor"  type="text" [(ngModel)]="info.PostalCode"></ion-input>
+        </ion-item>
+
+      <!-- others -->
+        <ion-item>
+          <ion-item>
+            <ion-textarea color="FDMcolor" placeholder="{{info.others}}"></ion-textarea>
+          </ion-item>
+        </ion-item>
+    
+      </ion-card-content>
+    
+    
+  
+    </ion-card>
+
+        <button ion-button block (click)="clientinfofunc(info)" color="FDMcolor">update info</button>
+
+</ion-content>

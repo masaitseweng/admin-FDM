@@ -1,0 +1,36 @@
+
+<ion-header>
+
+  <ion-navbar color="FDMcolor">
+    <ion-title>user</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <ion-list>
+    <ion-item  *ngFor="let user of Users" (click)="user()" >
+
+      <ion-thumbnail item-start>
+        <img src="{{user.profile_pic}}">
+      </ion-thumbnail>
+
+  <p>{{user.name}} {{user.surname}}</p>
+
+<!-- <p>Masaitseweng Molebiemang</p> -->
+
+
+<ion-icon name="arrow-forward"  item-end></ion-icon>
+
+    
+    </ion-item>
+
+  </ion-list>
+
+    
+
+
+</ion-content>

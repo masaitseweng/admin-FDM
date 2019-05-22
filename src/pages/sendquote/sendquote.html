@@ -1,0 +1,150 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>sendquote</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+<div *ngIf="discount">
+
+
+  <ion-list>
+  
+  
+    <ion-item>
+      <ion-label color="danger" floating>Name</ion-label>
+      <ion-icon color="danger" item-left name="contact"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Surname</ion-label>
+      <ion-icon color="danger" item-left name="contact"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Surname"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Street address</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Streetaddress"></ion-input>
+    </ion-item>
+  
+  
+    <ion-item>
+      <ion-label floating>Suburb</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Suburb"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>City/ Twon</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.city"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Postal Code</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Postal"></ion-input>
+    </ion-item>
+  
+  
+  
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-icon color="danger" item-left name="mail"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.to"></ion-input>
+    </ion-item>
+  
+  
+  
+  
+  </ion-list>
+
+</div> 
+
+<div *ngIf="!discount">
+
+
+  <ion-list>
+  
+  
+    <ion-item>
+      <ion-label color="danger" floating>Name</ion-label>
+      <ion-icon color="danger" item-left name="contact"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Surname</ion-label>
+      <ion-icon color="danger" item-left name="contact"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Surname"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Street address</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Streetaddress"></ion-input>
+    </ion-item>
+  
+  
+    <ion-item>
+      <ion-label floating>Suburb</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Suburb"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>City/ Twon</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.city"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Postal Code</ion-label>
+      <ion-icon color="danger" item-left name="home"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.Postal"></ion-input>
+    </ion-item>
+  
+  
+  
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-icon color="danger" item-left name="mail"></ion-icon>
+  
+      <ion-input class="style-input" [(ngModel)]="sendemailData.to"></ion-input>
+    </ion-item>
+  
+  
+  
+  
+  </ion-list>
+
+
+</div>
+
+
+
+  <button ion-button block color="danger" (click)="send()">
+
+    Send
+  </button>

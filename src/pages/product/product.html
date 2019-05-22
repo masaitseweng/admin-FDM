@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="FDMcolor">
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+
+
+
+  <ion-card >
+    <ion-card-header class="header-background-color" text-center>
+      Categories
+    </ion-card-header>
+  
+    <ion-list  inset>
+      <button detail-none text-wrap ion-item class="ion-card" *ngFor="let product of products " (click)="productitems(product)">
+        <ion-icon color="danger" name="md-apps" item-start></ion-icon>
+          <ion-icon color="danger" item-right name="ios-arrow-forward-outline"></ion-icon>
+          <h2>{{product.name}} </h2>
+      </button>
+  
+ 
+  
+    </ion-list>
+  </ion-card>
+
+
+
+
+
+
+
+</ion-content>

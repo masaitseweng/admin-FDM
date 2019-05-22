@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-navbar color="FDMcolor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="" text-center >
+      Add Client
+    </ion-title>
+
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+      <ion-list >
+
+
+      <!-- Company Name -->
+      <ion-item>
+        <ion-label color="FDMcolor" floating>Company Name</ion-label>
+        <ion-icon color="FDMcolor" item-left name="home"></ion-icon>
+        <ion-input type="text" [(ngModel)]="clientinfo.CompanyName"></ion-input>
+      </ion-item>
+
+      <!-- Job Title/ Position -->
+      <ion-item>
+        <ion-label color="FDMcolor" floating>Job Title/ Position</ion-label>
+        <ion-icon color="FDMcolor" item-left name="person"></ion-icon>
+        <ion-input type="text" [(ngModel)]="clientinfo.JobTitlePosition"></ion-input>
+      </ion-item>
+
+      <!-- Persons Name -->
+      <ion-item>
+        <ion-label color="FDMcolor" floating>Persons Name</ion-label>
+        <ion-icon color="FDMcolor" item-left name="person"></ion-icon>
+        <ion-input type="text" [(ngModel)]="clientinfo.PersonsName"></ion-input>
+      </ion-item>
+
+        <!-- Email address -->
+        <ion-item>
+          <ion-label color="FDMcolor" floating>Email Address</ion-label>
+          <ion-icon color="FDMcolor" item-left name="person"></ion-icon>
+          <ion-input type="text" [(ngModel)]="clientinfo.EmailAddress"></ion-input>
+        </ion-item>
+
+        <!-- Contact Number -->
+        <ion-item>
+          <ion-label color="FDMcolor" floating>Contact Number</ion-label>
+          <ion-icon color="FDMcolor" item-left name="person"></ion-icon>
+          <ion-input type="text" [(ngModel)]="clientinfo.ContactNumber"></ion-input>
+        </ion-item>
+
+        <!-- Street address -->
+        <ion-item>
+          <ion-label color="FDMcolor" floating>Street address</ion-label>
+          <ion-icon color="FDMcolor" item-left name="locate"></ion-icon>
+          <ion-input type="text" [(ngModel)]="clientinfo.Streetaddress"></ion-input>
+        </ion-item>
+
+        <!-- Suburb -->
+        <ion-item>
+          <ion-label color="FDMcolor" floating>Suburb</ion-label>
+          <ion-icon color="FDMcolor" item-left name="locate"></ion-icon>
+          <ion-input type="text" [(ngModel)]="clientinfo.Suburb"></ion-input>
+        </ion-item>
+
+        <!-- City/ Twon -->
+        <ion-item>
+          <ion-label color="FDMcolor" floating>City/ Twon</ion-label>
+          <ion-icon color="FDMcolor" item-left name="locate"></ion-icon>
+          <ion-input type="text" [(ngModel)]="clientinfo.CityTown"></ion-input>
+        </ion-item>
+
+        <!-- Postal Code -->
+        <ion-item>
+          <ion-label color="FDMcolor" floating>Postal Code</ion-label>
+          <ion-icon color="FDMcolor" item-left name="locate"></ion-icon>
+          <ion-input type="text" [(ngModel)]="clientinfo.PostalCode"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-item>
+              <ion-textarea [(ngModel)]="clientinfo.others" color="FDMcolor" placeholder="others"></ion-textarea>
+            </ion-item>
+        </ion-item>
+      <br>
+
+      <button block ion-button (click)="clientinfofunc(clientinfo)" color="FDMcolor">Add clients details</button>
+    
+
+       
+    </ion-list>
+
+</ion-content>

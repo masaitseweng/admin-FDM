@@ -1,0 +1,123 @@
+<ion-header>
+
+  <ion-navbar color="FDMcolor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="" text-center>
+      Clients
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+<ion-card>
+
+  <ion-card-header color="light" text-center>
+    <ion-icon name="alarm"></ion-icon> Add Appointments
+  </ion-card-header>
+
+  <ion-card-content  >
+
+    <!-- Name of business  -->
+    <ion-item>
+      <!-- <ion-label color="default" floating>Name of Business</ion-label> -->
+      <ion-icon color="default" name="create" item-right></ion-icon>
+      <ion-input type="text" [(ngModel)]="info.CompanyName"></ion-input>
+    </ion-item>
+
+    <!-- Address -->
+    <ion-item>
+      <!-- <ion-label color="default" floating>Address</ion-label> -->
+      <ion-icon color="default" name="create" item-right></ion-icon>
+      <ion-input type="text" [(ngModel)]="info.JobTitlePosition"></ion-input>
+    </ion-item>
+
+    <!-- Contact -->
+    <ion-item>
+      <!-- <ion-label color="default" floating>Contact Name</ion-label> -->
+      <ion-icon color="default" name="create" item-right></ion-icon>
+      <ion-input type="text" [(ngModel)]="info.PersonsName"></ion-input>
+    </ion-item>
+
+    <!-- Phone Numbers -->
+    <ion-item>
+      <!-- <ion-label color="default" floating>Phone Number</ion-label> -->
+      <ion-icon color="default" name="create" item-right></ion-icon>
+      <ion-input type="text" [(ngModel)]="info.EmailAddress"></ion-input>
+    </ion-item>
+
+    <!-- Alternate Numbers -->
+    <ion-item>
+    <!-- <ion-label color="default" floating>Alternative Numbers</ion-label> -->
+    <ion-icon color="default" name="create" item-right></ion-icon>
+    <ion-input type="text" [(ngModel)]="info.ContactNumber"></ion-input>
+    </ion-item>
+
+    <!-- Website -->
+    <ion-item>
+    <!-- <ion-label color="default" floating>Website</ion-label> -->
+    <ion-icon color="default" name="create" item-right></ion-icon>
+    <ion-input type="text" [(ngModel)]="info.Streetaddress"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    <!-- <ion-label color="default" floating>Website</ion-label> -->
+    <ion-icon color="default" name="create" item-right></ion-icon>
+    <ion-input type="text" [(ngModel)]="info.Suburb"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    <!-- <ion-label color="default" floating>Website</ion-label> -->
+    <ion-icon color="default" name="create" item-right></ion-icon>
+    <ion-input type="text" [(ngModel)]="info.CityTown"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    <!-- <ion-label color="default" floating>Website</ion-label> -->
+    <ion-icon color="default" name="create" item-right></ion-icon>
+    <ion-input type="text" [(ngModel)]="info.PostalCode"></ion-input>
+    </ion-item>
+
+          <ion-item>
+            <ion-item>
+              <ion-textarea [(ngModel)]="info.others" color="FDMcolor" placeholder="others"></ion-textarea>
+            </ion-item>
+        </ion-item>
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="Date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label>Time</ion-label>
+      <ion-select [(ngModel)]="time">
+        <ion-option value="09:00:00">9:00</ion-option>
+        <ion-option value="10:15:00">10:15</ion-option>
+        <ion-option value="11:30:00">11:30</ion-option>
+        <ion-option value="12:45:00">12:45</ion-option>
+        <ion-option value="14:00:00">14:00</ion-option>
+        <ion-option value="15:00:00">15:00</ion-option>
+      </ion-select>
+
+    </ion-item>
+
+    <div text-center> <button color="default" inline-block ion-button
+        (click)="add(info,time,Date)">Add</button>
+    </div>
+
+
+  </ion-card-content>
+
+
+</ion-card>
+
+
+
+</ion-content>

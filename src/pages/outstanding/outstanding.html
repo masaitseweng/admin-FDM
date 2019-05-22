@@ -1,0 +1,77 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>outstanding</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+
+  <ion-list>
+  
+    <ion-item-divider text-center color="fourtwentylight">
+      Client discount
+    </ion-item-divider>
+  
+    <ion-card color="danger">
+      <ion-item color="danger">
+  
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12 text-center>
+              <button detail-none color="danger" ion-item>
+                <ion-icon name="ios-trending-up-outline" item-start></ion-icon>
+                <strong>Subtotal</strong> <span> R{{subformat}} &nbsp;</span>
+              </button>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-12>
+              <button detail-none color="danger" ion-item>
+                <ion-icon name="cut" item-start></ion-icon>
+                <strong>Paid</strong> <span> R{{paidView }} &nbsp;</span>
+              </button>
+            </ion-col>
+          </ion-row>
+  
+  
+          <ion-row>
+            <ion-col col-12>
+              <button detail-none color="danger" ion-item>
+                <ion-icon name="ios-trophy-outline" item-start></ion-icon>
+                <strong>Total</strong> <span> R{{totalview}} &nbsp;</span>
+              </button>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Input paid Amount</ion-label>
+      <ion-input type="number" [(ngModel)]="PaidAmount.Amount"  ></ion-input>
+    </ion-item>
+
+        <button ion-button block color="danger"  (click)="calculate(PaidAmount)">
+        
+          calculate
+        </button>
+  
+    </ion-card>
+
+  </ion-list>
+
+
+  
+  <button ion-button block color="danger" [disabled]="EnableSend" (click)="send()">
+  
+    Send
+  </button>
+
+
+</ion-content>
